@@ -86,7 +86,11 @@
             <p>Version control allows you (and your team) to do two powerful things</p>
             <div class="fragment">
               <h4>Collaborate</h4>
-              <p>Create anything with other people, from academic papers to entire websites and applications.</p>
+              <ul>
+              <li>Create anything with other people, from academic papers to entire websites and applications.</li>
+              <li>Git doesn't care what type of content you track</li>
+              <li>GitHub can display all kinds of content like <a href="https://github.com/skalnik/peg-board-spindle/commit/7a1039fe5709ff49eec7800aa7259a5e5b536d05">3D Models</a></li>
+              </ul>
             </div>
             <div class="fragment">
               <h4>Track and revert changes</h4>
@@ -108,8 +112,12 @@
           <section>
             <h3>Brief history of Version Control</h3>
             <p><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
-            <p><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
+            <p><span class ="green">1995</span> -- Perforce (Proprietary, centralized server)</p>
+            <p><span class ="green">2000</span> -- SVN (Apache Subversion)</p>
+            <p><span class ="green">2003</span> -- darcs (first appearance of "patch theory")</p>
             <p><span class ="green">2005</span> -- Git (well, Git)</p>
+            <p><span class ="green">2005</span> -- Mercurial (now owned by Atlassian)</p>
+            <p><span class ="green">2006</span> -- Fossil (integrated wiki, issue tracking)</p>
           </section>
           <section>
             <h3>Version Control Types</h3>
@@ -139,7 +147,8 @@
           <p>Goals of Git Design</p>
           <ul>
             <li>Fast -- add to your team and code base quickly</li>
-            <li>Distributed (see slide above) </li>
+            <li>Distributed -- failed servers don't stop the music</li>
+            <li>Local -- very few commands need to talk to a server</li>
             <li>Each commit has a corresponding hash (track changes from everyone)</li>
             <li>Everyone has a local copy of the history</li>
           </ul>
@@ -151,6 +160,7 @@
             <a href = "http://git-scm.com/downloads" alt ="Download latest version of Git" target ="_blank">
               <p>Install git</p>
               <img src = "images/install-git.png" alt = "Download latest version of Git"/>
+              <h4>http://git-scm.com/downloads</h4>
             </a>
           </section>
           <section>
@@ -261,6 +271,10 @@ $ git config --list
             </ul>
           </section>
           <section>
+            <h3>What Happened</h3>
+            <img src = "images/three_stages.png" alt ="The three steps of a git workflow"/>
+          </section>
+          <section>
             <h3>Look at our progress</h3>
             <pre><code contenteditable class ="command-line">
   git log
@@ -338,10 +352,12 @@ git reset my_new_file.txt
             <p>Create new file my_other_file.txt</p>
             <pre><code contenteditable class ="command-line">
 git add my_other_file.txt
+git commit -m "Add this new file"
             </code></pre>
             <p>Manually delete your file</p>
             <pre><code contenteditable class ="command-line">
 git rm my_other_file.txt
+git commit -m "Never mind"
             </code></pre>
           </section>
         </section>
@@ -442,12 +458,12 @@ git merge master
           <section>
             <h3>GitHub</h3>
             <h4>Create your first repository</h4>
-            <img src = "images/bootcamp_2_newrepo.jpg" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
+            <img src = "images/01-new-repo.png" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
           </section>
           <section>
             <h3>GitHub</h3>
             <h4>Create your first repository</h4>
-            <img src = "images/bootcamp_2_repoinfo.png" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
+            <img src = "images/02-new-repo.png" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
           </section>
           <section>
             <h3>GitHub</h3>
@@ -506,7 +522,7 @@ git push origin master
           </section>
           <section>
             <h3>Forking</h3>
-            <img src = "images/bootcamp_3_fork.jpg" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
+            <img src = "images/03-fork.png" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
           </section>
           <section>
             <h3>Forking</h3>
